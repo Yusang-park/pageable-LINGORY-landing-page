@@ -1,0 +1,74 @@
+/* section welcome */
+.welcome {
+  background: powderblue;
+}
+
+.homepage .phone-holder {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.homepage .phone {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Media query */
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .homepage .phone {
+    width: 30%;
+    background: url(img/Phone_without_innershadow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .homepage .phone video {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 80%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+  .homepage .phone {
+    height: 705px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+  .homepage .phone-holder {
+    width: 75%;
+  }
+}
