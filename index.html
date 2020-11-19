@@ -111,12 +111,17 @@
       <div class="team" data-anchor="page-4">
         <div class="container">
           <div class="grid">
+            <div class="about">
               <h1>Meet Our Team</h1>
               <p>Lingory team leads web and mobile development<br/>
               community through <strong>confrerences, blogs, open source, videos,<br/>
               books</strong> and meetups.</p>
               <p>We value open source, learning, remote work, and open<br />
                 communication.</p>
+            </div>
+              <div class="name_tags"> 
+                
+              </div>
           </div>
         </div>
       </div>
@@ -137,8 +142,33 @@
       });
       pages.on("scroll", () => {});
 
-      document.getElementById("gif").src =
-  "img/logo_good_quality.gif?a=" + Math.random();
+      document.getElementById("gif").src = "img/logo_good_quality.gif?a=" + Math.random();
+
+      //그냥 xd에서 name_tags와 gray box를 같이 추출하자!!!!!!!
+
+      //gray box resize
+      // const gray_box = document.querySelector('.gray_box');
+      // const name_tags = document.querySelector('.name_tags');
+      // gray_box.style.bottom = `${name_tags.style.top}px`;
+      // console.log(name_tags);
+      // console.log(gray_box.style.bottom);
+
+      //for a bug that svg is resized when approaching to the team section
+      //solution : position: absolute (x) relative(o)
+      // const gray_box = document.querySelector('.gray_box');
+      // const sections = document.querySelectorAll('.section');
+      // const team_section = document.querySelector('.team');
+
+      // let sections_height=0;
+      // for(let i = 0; i<sections.length; i++){
+      //   sections_height += sections[i].offsetHeight;
+      // }
+      // pages.on("scroll",()=>{
+      //   if(`${sections[0].offsetHeight + pages.scrollPosition}` > sections_height){
+      //     gray_box.style.visibility="visible";
+      //   }
+      //   else gray_box.style.visibility="hidden";
+      // });
     </script>
   </body>
 </html>
