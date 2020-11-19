@@ -9,6 +9,10 @@
   justify-content: space-evenly;
 }
 
+.homepage .section:nth-child(even) {
+  background: #f8f8f6f6;
+}
+
 .paragraph {
   width: 100%;
   position: relative;
@@ -30,6 +34,22 @@
 
 h1 {
   margin: 0;
+}
+
+h2 {
+  font-family: urbane-rounded, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #00b7a9;
+}
+
+p {
+  font-family: urbane-rounded, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #525252;
+  position: relative;
+  left: 0.88em;
 }
 
 .container {
@@ -102,9 +122,9 @@ h1 {
     width: 100%;
   }
   h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 6rem;
-    margin: 40px 0;
+    margin: 35px 0;
   }
   p {
     font-size: 1.6rem;
