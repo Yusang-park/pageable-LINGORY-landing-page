@@ -13,7 +13,8 @@
         <div class="container">
           <div class="grid">
             <div class="wrapper">
-              <h1 class="title">Learn How Koreans Talk.</h1>
+              <img id="gif" src="" alt="" />
+              <h1>Learn How Koreans Talk</h1>
             </div>
           </div>
         </div>
@@ -124,6 +125,9 @@
         },
       });
       pages.on("scroll", () => {});
+
+      document.getElementById("gif").src =
+  "img/logo_good_quality.gif?a=" + Math.random();
     </script>
   </body>
 </html>
