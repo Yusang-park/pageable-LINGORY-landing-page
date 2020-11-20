@@ -143,13 +143,11 @@
       pages.on("scroll",()=>{
         if(Math.floor(pages.scrollPosition)> 1){
           console.log('bar 생성');
-          pips.style.opacity = 1;
-          pips.style.display = 'flex';
+          pips.classList.add('change');
         }
         else {
           console.log('bar 제거'); //section 0이므로
-          pips.style.opacity = 0;
-          pips.style.display = 'none';
+          pips.classList.remove('change');
         }
       });
 
