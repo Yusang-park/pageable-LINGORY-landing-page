@@ -1,6 +1,11 @@
 :root {
   --color-dominant: #00b7a9;
 }
+
+#homepage {
+  overflow-x: hidden;
+}
+
 /* Welcome Section */
 .welcome {
   background: rgb(0, 183, 169);
@@ -86,11 +91,6 @@ p {
   width: 100%;
 }
 
-.team > .container,
-.team > .container > .grid {
-  height: 100vh;
-}
-
 .team h1 {
   margin: 4.5rem 0 0 1rem;
   color: var(--color-dominant);
@@ -105,6 +105,17 @@ p {
   font-size: 2rem;
   font-weight: lighter;
   letter-spacing: 0.2rem;
+}
+
+.tags_container {
+  position: relative;
+  height: 60vh;
+}
+
+.tags {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 /* Media query */
