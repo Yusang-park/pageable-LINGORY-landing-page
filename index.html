@@ -121,6 +121,7 @@
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
     <script>
       const pages = new Pageable("#hompage", {
+        pips: true, // display the pips
         animation: 400, // the duration in ms of the scroll animation
         delay: 100, // the delay in ms before the scroll animation starts
         orientation: "vertical", // or horizontal
@@ -136,54 +137,26 @@
 
       document.getElementById("gif").src = "img/logo_good_quality.gif?a=" + Math.random();
 
-      //그냥 xd에서 name_tags와 gray box를 같이 추출하자!!!!!!!
-
-      //gray box resize
-      // const gray_box = document.querySelector('.gray_box');
-      // const name_tags = document.querySelector('.name_tags');
-      // gray_box.style.bottom = `${name_tags.style.top}px`;
-      // console.log(name_tags);
-      // console.log(gray_box.style.bottom);
-
-      //for a bug that svg is resized when approaching to the team section
-      //solution : position: absolute (x) relative(o)
-      // const gray_box = document.querySelector('.gray_box');
-      // const sections = document.querySelectorAll('.section');
-      // const team_section = document.querySelector('.team');
-
-      // let sections_height=0;
-      // for(let i = 0; i<sections.length; i++){
-      //   sections_height += sections[i].offsetHeight;
-      // }
-      // pages.on("scroll",()=>{
-      //   if(`${sections[0].offsetHeight + pages.scrollPosition}` > sections_height){
-      //     gray_box.style.visibility="visible";
-      //   }
-      //   else gray_box.style.visibility="hidden";
-      // });
-
       const pips = document.querySelector('.pg-pips');
       const section0 = document.querySelector('.welcome');
 
-      // console.log(section0.offsetHeight);
       pages.on("scroll",()=>{
-        console.log('pages.scrollPosition : ' + pages.scrollPosition);
-
         if(Math.floor(pages.scrollPosition)> 1){
           console.log('bar 생성');
           pips.style.opacity = 1;
           pips.style.display = 'flex';
         }
         else {
-          console.log('section0이니까 bar 없앰');
+          console.log('bar 제거'); //section 0이므로
           pips.style.opacity = 0;
           pips.style.display = 'none';
         }
       });
 
-      // pages.on("scroll.start", data => {
-      //   pips.style.opacity = 1;
-      // });
+      // 새로 고침시 첫 페이지로 이동하기
+      window.addEventListener('load',()=>{ 
+        pages.scrollToAnchor("#page-0");
+      });
     </script>
   </body>
 </html>
