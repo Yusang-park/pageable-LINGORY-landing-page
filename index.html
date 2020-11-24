@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lingory</title>
-    <link rel="stylesheet" href="https://use.typekit.net/ber2ncp.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ber2ncp.css" />
     <link rel="stylesheet" href="/main.css" />
   </head>
   <body class="homepage">
@@ -12,8 +12,8 @@
       <div class="section welcome" data-anchor="page-0">
         <div class="container">
           <div class="grid">
-              <img id="gif" src="" alt="" />
-              <h1>Speak Like Local People</h1>
+            <img id="gif" src="" alt="" />
+            <h1>Speak Like Local People</h1>
           </div>
         </div>
       </div>
@@ -28,21 +28,13 @@
             </p>
           </div>
           <div class="phone-holder">
-              <div class="phone">
-                    <video
-                      autoplay=""
-                      autobuffer=""
-                      muted=""
-                      playsinline=""
-                      >
-                      <source
-                        src="video/desc1.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-              </div>
+            <div class="phone">
+              <video autoplay="" autobuffer="" muted="" playsinline="">
+                <source src="video/desc1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+          </div>
         </div>
       </div>
       <div class="section desc2" data-anchor="page-2">
@@ -50,27 +42,21 @@
           <div class="paragraph">
             <h2>Practical contents</h2>
             <p>
-              I have seen many students complaining that they can not really speak out<br />
+              I have seen many students complaining that they can not really
+              speak out<br />
               when they learnt from a class.<br />
-              After learning in Lingory, you will be able to speak out with confidence.
+              After learning in Lingory, you will be able to speak out with
+              confidence.
             </p>
           </div>
           <div class="phone-holder">
-              <div class="phone">
-                    <video
-                      autoplay=""
-                      autobuffer=""
-                      muted=""
-                      playsinline=""
-                      >
-                      <source
-                        src="video/desc2.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-              </div>
+            <div class="phone">
+              <video autoplay="" autobuffer="" muted="" playsinline="">
+                <source src="video/desc2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+          </div>
         </div>
       </div>
       <div class="section desc3" data-anchor="page-3">
@@ -78,43 +64,45 @@
           <div class="paragraph">
             <h2>Personal library</h2>
             <p>
-              While learning in Lingory, there will be some words or sentences which<br />
+              While learning in Lingory, there will be some words or sentences
+              which<br />
               take longer time for you to memorize.<br />
-              Hit the save button in this case, then it will save the current page in your library.
+              Hit the save button in this case, then it will save the current
+              page in your library.
             </p>
           </div>
           <div class="phone-holder">
-              <div class="phone">
-                    <video
-                      autoplay=""
-                      autobuffer=""
-                      muted=""
-                      playsinline=""
-                      >
-                      <source
-                        src="video/desc3.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-              </div>
+            <div class="phone">
+              <video autoplay="" autobuffer="" muted="" playsinline="">
+                <source src="video/desc3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+          </div>
         </div>
       </div>
       <div class="team" data-anchor="page-4">
         <div class="container">
-            <div class="about">
-              <h1>Meet Our Team</h1>
-              <p>Lingory team leads web and mobile development<br/>
-              community through <strong>confrerences, blogs, open source, videos,<br/>
-              books</strong> and meetups.</p>
-              <p>We value open source, learning, remote work, and open<br />
-                communication.</p>
-            </div>
+          <div class="paragraph">
+            <h2>Meet Our Team</h2>
+            <p>
+              Lingory team leads web and mobile development<br />
+              community through
+              <strong
+                >confrerences, blogs, open source, videos,<br />
+                books</strong
+              >
+              and meetups.
+            </p>
+            <p>
+              We value open source, learning, remote work, and open<br />
+              communication.
+            </p>
           </div>
-              <div class="tags_container"> 
-                <img src="img/team.svg" alt="our team" class="tags">
-              </div>
+        </div>
+        <div class="tags_container">
+          <img src="img/team.svg" alt="our team" class="tags" />
+        </div>
       </div>
     </div>
 
@@ -135,24 +123,24 @@
       });
       pages.on("scroll", () => {});
 
-      document.getElementById("gif").src = "img/logo_good_quality.gif?a=" + Math.random();
+      document.getElementById("gif").src =
+        "img/logo_good_quality.gif?a=" + Math.random();
 
-      const pips = document.querySelector('.pg-pips');
-      const section0 = document.querySelector('.welcome');
+      const pips = document.querySelector(".pg-pips");
+      const section0 = document.querySelector(".welcome");
 
-      pages.on("scroll",()=>{
-        if(Math.floor(pages.scrollPosition)> 1){
-          console.log('bar 생성');
-          pips.classList.add('change');
-        }
-        else {
-          console.log('bar 제거'); //section 0이므로
-          pips.classList.remove('change');
+      pages.on("scroll", () => {
+        if (Math.floor(pages.scrollPosition) > 1) {
+          console.log("bar 생성");
+          pips.classList.add("change");
+        } else {
+          console.log("bar 제거"); //section 0이므로
+          pips.classList.remove("change");
         }
       });
 
       // 새로 고침시 첫 페이지로 이동하기
-      window.addEventListener('load',()=>{ 
+      window.addEventListener("load", () => {
         pages.scrollToAnchor("#page-0");
       });
     </script>

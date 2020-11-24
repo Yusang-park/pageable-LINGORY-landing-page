@@ -92,7 +92,7 @@ p {
   width: 100%;
 }
 
-.team h1 {
+/* .team h2 {
   margin: 4.5rem 0 0 1rem;
   color: var(--color-dominant);
   font-size: 3.3rem;
@@ -106,7 +106,7 @@ p {
   font-size: 1.3rem;
   font-weight: lighter;
   letter-spacing: 0.2rem;
-}
+} */
 
 .tags_container {
   position: relative;
@@ -236,32 +236,123 @@ nav span:after {
 }
 
 /* Media query */
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+    height: 90vh;
+    margin: 0 auto;
+  }
+  .welcome .container {
+    display: flex;
+  }
+  .welcome h1 {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 2em;
+  }
+  .container {
+    display: block;
+  }
+  .paragraph {
+    position: static;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 0 0;
+  }
+  p {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+  .phone-holder {
+    top: 3em;
+  }
+  .homepage .phone video {
+    width: 100%;
+    position: relative;
+  }
+  .tags_container {
+    height: 3vh;
+  }
+  .tags {
+    position: static;
+  }
+}
 
 @media (min-width: 576px) {
   .container {
     max-width: 576px;
+    height: 100vh;
+  }
+  .welcome h1 {
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 0 0;
+  }
+
+  .phone-holder {
+    top: -2.5em;
+  }
+  .homepage .phone video {
+    display: block;
+    margin: 0 auto;
+    top: 40px;
+    left: 10px;
+    width: 80%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .tags {
+    position: absolute;
+  }
+  .tags_container {
+    height: 0;
   }
 }
 
 @media (min-width: 768px) {
   .container {
+    display: flex;
     max-width: 768px;
     margin: 0 auto;
   }
+  .welcome h1 {
+    letter-spacing: 5px;
+  }
+  .paragraph {
+    position: relative;
+  }
+  h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin: 35px 0;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .phone-holder {
+    top: 5em;
+  }
   .homepage .phone {
-    width: 30%;
+    width: 60%;
+    height: 705px;
     background: url(img/Phone_without_innershadow.png);
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
   .homepage .phone video {
-    position: relative;
-    top: 30px;
-    left: 20px;
-    width: 80%;
-    height: 100%;
-    z-index: -1;
+    top: -80px;
+  }
+
+  .tags_container {
+    height: 45vh;
   }
 }
 
@@ -269,8 +360,21 @@ nav span:after {
   .container {
     max-width: 992px;
   }
-  .homepage .phone {
-    height: 705px;
+  h2 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    margin: 35px 0;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .homepage .phone video {
+    top: 0;
+  }
+
+  .tags_container {
+    height: 55vh;
   }
 }
 
