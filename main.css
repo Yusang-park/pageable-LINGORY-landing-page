@@ -1,5 +1,5 @@
 :root {
-  --color-dominant: #00b7a9;
+  --color-main: #00b7a9;
 }
 
 #homepage {
@@ -8,7 +8,7 @@
 
 /* Welcome Section */
 .welcome {
-  background: rgb(0, 183, 169);
+  background: var(--color-main);
 }
 
 #gif {
@@ -22,9 +22,8 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(253, 253, 253);
-  line-height: 3em;
-  letter-spacing: 15px;
   text-align: center;
+  margin: 0;
 }
 
 /* Common */
@@ -40,13 +39,11 @@
 
 .paragraph {
   width: 100%;
-  position: relative;
   bottom: 10em;
 }
 
 .phone-holder {
   position: relative;
-  top: 5em;
   width: 100%;
   z-index: 2;
 }
@@ -57,18 +54,11 @@
   margin: 0 auto;
 }
 
-h1 {
-  font-family: urbane-rounded, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  margin: 0;
-}
-
 h2 {
   font-family: urbane-rounded, sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: var(--color-dominant);
+  color: var(--color-main);
 }
 
 p {
@@ -81,36 +71,9 @@ p {
   line-height: 1.5em;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-}
-
 /* Section Team */
-
-.team {
-  width: 100%;
-}
-
-/* .team h2 {
-  margin: 4.5rem 0 0 1rem;
-  color: var(--color-dominant);
-  font-size: 3.3rem;
-  font-weight: bolder;
-  line-height: 1rem;
-}
-
-.team p {
-  margin: 3rem 0 0 5rem;
-  color: #575656;
-  font-size: 1.3rem;
-  font-weight: lighter;
-  letter-spacing: 0.2rem;
-} */
-
 .tags_container {
   position: relative;
-  height: 65vh;
 }
 
 .tags {
@@ -248,7 +211,7 @@ nav span:after {
     display: flex;
   }
   .welcome h1 {
-    font-size: 1.2em;
+    font-size: 0.9em;
     letter-spacing: 1px;
     line-height: 2em;
   }
@@ -286,7 +249,7 @@ nav span:after {
     max-width: 576px;
   }
   .welcome h1 {
-    letter-spacing: 1px;
+    font-size: 1.4em;
   }
 
   h2 {
@@ -323,10 +286,12 @@ nav span:after {
 @media (min-width: 768px) {
   .container {
     display: flex;
+    align-items: center;
     max-width: 768px;
     margin: 0 auto;
   }
   .welcome h1 {
+    font-size: 1.6em;
     letter-spacing: 5px;
   }
   .paragraph {
@@ -367,6 +332,9 @@ nav span:after {
   .container {
     max-width: 992px;
   }
+  .welcome h1 {
+    font-size: 2em;
+  }
   .homepage .phone video {
     top: 0;
     left: -15px;
@@ -379,6 +347,10 @@ nav span:after {
   }
   .paragraph {
     margin-left: 2em;
+  }
+  .welcome h1 {
+    font-size: 2.2em;
+    letter-spacing: 7px;
   }
   h2 {
     font-size: 4rem;
