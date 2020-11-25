@@ -237,9 +237,11 @@ nav span:after {
 
 /* Media query */
 @media (min-width: 375px) {
+  /* 팀 소개 모바일용 수정하기 */
   .container {
+    display: block;
     max-width: 375px;
-    height: 90vh;
+    height: 100vh;
     margin: 0 auto;
   }
   .welcome .container {
@@ -250,11 +252,9 @@ nav span:after {
     letter-spacing: 1px;
     line-height: 2em;
   }
-  .container {
-    display: block;
-  }
   .paragraph {
     position: static;
+    margin-top: 1em;
   }
   h2 {
     font-size: 1.5rem;
@@ -263,27 +263,27 @@ nav span:after {
   }
   p {
     width: 90%;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .phone-holder {
-    top: 3em;
+    top: 0;
   }
   .homepage .phone video {
     width: 100%;
     position: relative;
   }
+
   .tags_container {
-    height: 3vh;
+    height: 0;
   }
-  .tags {
+  /* .tags {
     position: static;
-  }
+  } */
 }
 
 @media (min-width: 576px) {
   .container {
     max-width: 576px;
-    height: 100vh;
   }
   .welcome h1 {
     letter-spacing: 1px;
@@ -295,9 +295,13 @@ nav span:after {
     margin: 0 0;
   }
 
-  .phone-holder {
-    top: -2.5em;
+  .paragraph {
+    margin-top: 5em;
   }
+
+  /* .phone-holder {
+    top: -2.5em;
+  } */
   .homepage .phone video {
     display: block;
     margin: 0 auto;
@@ -309,7 +313,7 @@ nav span:after {
   }
 
   .tags {
-    position: absolute;
+    bottom: 4em;
   }
   .tags_container {
     height: 0;
@@ -327,32 +331,35 @@ nav span:after {
   }
   .paragraph {
     position: relative;
+    transform: translateY(-3em);
   }
   h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     line-height: 3rem;
     margin: 35px 0;
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .phone-holder {
-    top: 5em;
+    top: 25em;
   }
   .homepage .phone {
-    width: 60%;
-    height: 705px;
+    width: 75%;
+    height: 100vh;
     background: url(img/Phone_without_innershadow.png);
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
   .homepage .phone video {
-    top: -80px;
+    top: 0;
+    left: -10px;
+    height: 50%;
   }
 
   .tags_container {
-    height: 45vh;
+    height: 5vh;
   }
 }
 
@@ -360,21 +367,9 @@ nav span:after {
   .container {
     max-width: 992px;
   }
-  h2 {
-    font-size: 2.5rem;
-    line-height: 4rem;
-    margin: 35px 0;
-  }
-  p {
-    font-size: 1.2rem;
-  }
-
   .homepage .phone video {
     top: 0;
-  }
-
-  .tags_container {
-    height: 55vh;
+    left: -15px;
   }
 }
 
@@ -382,17 +377,18 @@ nav span:after {
   .container {
     max-width: 1200px;
   }
+  .paragraph {
+    margin-left: 2em;
+  }
   h2 {
-    font-size: 3.3rem;
+    font-size: 4rem;
     line-height: 4rem;
-    margin: 30px 0;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
-  .homepage .phone {
-    width: 50%;
-    height: 800px;
+  .homepage .phone video {
+    top: 80px;
   }
 }
 
@@ -401,15 +397,18 @@ nav span:after {
     max-width: 1600px;
   }
   .homepage .phone-holder {
-    width: 100%;
+    width: 80%;
+    top: 10em;
+  }
+  .homepage .phone video {
+    height: 65%;
   }
   h2 {
-    font-size: 3.3rem;
+    font-size: 4.2rem;
     line-height: 6rem;
-    margin: 35px 0;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 }
 
