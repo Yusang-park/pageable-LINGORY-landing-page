@@ -359,13 +359,13 @@ nav span:after {
     font-size: 2em;
   }
   .phone-holder {
-    top: 5%;
+    top: 30%;
   }
   .homepage .phone {
     width: 70%;
   }
   .homepage .phone video {
-    top: 0;
+    height: 50%;
     left: -15px;
   }
 }
