@@ -39,7 +39,7 @@
 
 .paragraph {
   width: 100%;
-  bottom: 10em;
+  bottom: 5em;
 }
 
 .phone-holder {
@@ -72,9 +72,9 @@ p {
 }
 
 /* Section Team */
-.tags_container {
+/* .tags_container {
   position: relative;
-}
+} */
 
 .tags {
   position: absolute;
@@ -204,7 +204,7 @@ nav span:after {
   .container {
     display: block;
     max-width: 375px;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
   }
   .welcome .container {
@@ -218,23 +218,26 @@ nav span:after {
   }
   .paragraph {
     position: static;
-    margin-top: 1em;
+    margin-top: 1.2em;
+    margin-left: 1em;
   }
   h2 {
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 0;
     margin: 0 0;
   }
   p {
     width: 90%;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
   .phone-holder {
     top: 0;
   }
   .homepage .phone video {
-    width: 100%;
     position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
   }
 
   .tags_container {
@@ -297,25 +300,28 @@ nav span:after {
   }
   .paragraph {
     position: relative;
-    transform: translateY(-3em);
+    margin-left: 10px;
+    /* transform: translateY(-3em); */
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3rem;
     margin: 35px 0;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
-  .phone-holder {
-    top: 25em;
-  }
+  /* .phone-holder {
+    top: 10%;
+  } */
   .homepage .phone {
-    width: 75%;
+    width: 80%;
     height: 100vh;
     background: url(img/Phone_without_innershadow.png);
     background-repeat: no-repeat;
     background-size: 100%;
+
+    top: 3em;
   }
 
   .homepage .phone video {
@@ -335,6 +341,12 @@ nav span:after {
   }
   .welcome h1 {
     font-size: 2em;
+  }
+  .phone-holder {
+    top: 5%;
+  }
+  .homepage .phone {
+    width: 70%;
   }
   .homepage .phone video {
     top: 0;
