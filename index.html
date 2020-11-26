@@ -27,7 +27,7 @@
               with local people.<br />
               Lingory has around 3,500 words in a well oranized structure.
             </p>
-            <p>
+            <p class="extra">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem, accusantium?<br />
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
@@ -56,7 +56,7 @@
               After learning in Lingory, you will be able to speak out with
               confidence.
             </p>
-            <p>
+            <p class="extra">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem, accusantium?<br />
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
@@ -85,7 +85,7 @@
               Hit the save button in this case, then it will save the current
               page in your library.
             </p>
-            <p>
+            <p class="extra">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem, accusantium?<br />
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
@@ -164,6 +164,18 @@
       // 새로 고침시 첫 페이지로 이동하기
       window.addEventListener("load", () => {
         pages.scrollToAnchor("#page-0");
+      });
+
+      const extra = document.querySelectorAll(".extra");
+      console.log(extra);
+
+      console.log(document.body.offsetWidth);
+      window.addEventListener("resize", () => {
+        if (document.body.offsetWidth > 767) {
+          extra.forEach((e) => e.classList.add("visible"));
+        } else {
+          extra.forEach((e) => e.classList.remove("visible"));
+        }
       });
     </script>
   </body>
