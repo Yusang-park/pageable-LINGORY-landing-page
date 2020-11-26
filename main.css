@@ -6,6 +6,10 @@
   overflow-x: hidden;
 }
 
+body {
+  height: 100%;
+}
+
 /* Welcome Section */
 .welcome {
   background: var(--color-main);
@@ -72,9 +76,9 @@ p {
 }
 
 /* Section Team */
-/* .tags_container {
+.tags_container {
   position: relative;
-} */
+}
 
 .tags {
   position: absolute;
@@ -204,7 +208,7 @@ nav span:after {
   .container {
     display: block;
     max-width: 375px;
-    /* height: 100vh; */
+    height: 100%;
     margin: 0 auto;
   }
   .welcome .container {
