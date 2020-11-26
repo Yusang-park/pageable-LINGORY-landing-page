@@ -166,15 +166,13 @@
         pages.scrollToAnchor("#page-0");
       });
 
-      //767px 이상이면 extra 메세지 안 보이게 설정
+      //767px 이하면 extra 메세지 안 보이게 설정
       const extra = document.querySelectorAll(".extra");
-      window.addEventListener("resize", () => {
-        if (document.body.offsetWidth > 767) {
-          extra.forEach((e) => e.classList.add("visible"));
-        } else {
-          extra.forEach((e) => e.classList.remove("visible"));
-        }
-      });
+      if (document.body.offsetWidth > 767) {
+        extra.forEach((e) => e.classList.add("visible"));
+      } else {
+        extra.forEach((e) => e.classList.remove("visible"));
+      }
     </script>
   </body>
 </html>
