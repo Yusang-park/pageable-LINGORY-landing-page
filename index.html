@@ -166,10 +166,8 @@
         pages.scrollToAnchor("#page-0");
       });
 
+      //767px 이상이면 extra 메세지 안 보이게 설정
       const extra = document.querySelectorAll(".extra");
-      console.log(extra);
-
-      console.log(document.body.offsetWidth);
       window.addEventListener("resize", () => {
         if (document.body.offsetWidth > 767) {
           extra.forEach((e) => e.classList.add("visible"));
