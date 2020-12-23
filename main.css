@@ -10,6 +10,11 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 /* Welcome Section */
 .welcome {
   background: var(--color-main);
