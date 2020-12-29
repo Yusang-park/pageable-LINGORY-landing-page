@@ -202,9 +202,9 @@ p {
   opacity: 0;
   display: flex;
   -webkit-animation-name: fadeOut;
-  -webkit-animation-duration: 0.3s;
+  -webkit-animation-duration: 0.19s;
   animation-name: fadeOut;
-  animation-duration: 0.3s;
+  animation-duration: 0.19s;
 }
 
 nav {
@@ -420,15 +420,20 @@ nav span:after {
   .welcome h1 {
     font-size: 2em;
   }
-  .phone-holder {
-    top: 30%;
-  }
-  .homepage .phone {
-    width: 70%;
-  }
+  /* .phone-holder {
+    top: 3em;
+  } */
+
   .homepage .phone video {
-    height: 50%;
+    /* height: 50%; */
     left: -15px;
+  }
+
+  .team > .container {
+    align-items: flex-start;
+  }
+  .paragraph {
+    margin-top: 10em;
   }
 }
 
@@ -438,19 +443,21 @@ nav span:after {
   }
   .paragraph {
     margin-left: 2em;
-    bottom: 13em;
+    /* bottom: 0; */
   }
   .welcome h1 {
     font-size: 2.2em;
     letter-spacing: 7px;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     line-height: 4rem;
   }
+
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
+
   .homepage .phone video {
     top: 80px;
   }
@@ -474,10 +481,28 @@ nav span:after {
   p {
     font-size: 1.7rem;
   }
+  .team > .container {
+    align-items: flex-start;
+  }
+  .paragraph {
+    margin-top: 10em;
+  }
 }
 
 @media (min-width: 2000px) {
   .team > .container {
     max-width: 2000px;
+  }
+}
+
+@media (min-height: 700px) {
+  .homepage .phone {
+    width: 58%;
+  }
+}
+
+@media (min-height: 900px) {
+  .homepage .phone {
+    width: 65%;
   }
 }
