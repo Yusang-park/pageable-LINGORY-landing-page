@@ -1,7 +1,7 @@
 var pages = new Pageable("#hompage", {
   pips: true, // display the pips
   animation: 400, // the duration in ms of the scroll animation
-  delay: 100, // the delay in ms before the scroll animation starts
+  delay: 150, // the delay in ms before the scroll animation starts
   orientation: "vertical", // or horizontal
   swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
   //freeScroll: false,
@@ -22,6 +22,7 @@ const section0 = document.querySelector(".welcome");
 
 pages.on("scroll", () => {
   if (Math.floor(pages.scrollPosition) > 1) {
+    console.log(Math.floor(pages.scrollPosition));
     console.log("bar 생성");
     pips.classList.add("change");
   } else {
@@ -62,9 +63,11 @@ if (document.body.offsetWidth > 767) {
 //   }
 // });
 
-pages.on("scroll.end", (e) => {
-  console.log(e.index);
-  // do something when scrolling ends
-});
+// pages.on("scroll.end", (e) => {
+//   console.log(e.index);
+//   // do something when scrolling ends
+// });
 // if (클래스에 pg-active가 있으면)
 //setTimeOut으로 events: wheel: false로 하기. 한 100ms동안??
+
+//스크롤 한 양이 섹션 크기와 동일해지면 스크롤 멈추게 하기!!
