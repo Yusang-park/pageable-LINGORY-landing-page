@@ -30,6 +30,7 @@ pages.on("scroll", () => {
     console.log("bar 제거  " + Math.floor(pages.scrollPosition)); //section 0이므로
     pips.classList.remove("appear");
     pips.classList.add("disappear");
+    //pips.style.display = "none";
   }
 });
 

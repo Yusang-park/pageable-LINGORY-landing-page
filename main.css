@@ -248,19 +248,18 @@ nav ul li a span {
   height: 9px;
   width: 9px;
   border: 0;
-  -webkit-box-shadow: 2px 1px 10px 3px rgba(226, 162, 51, 1);
+  /* -webkit-box-shadow: 2px 1px 10px 3px rgba(226, 162, 51, 1);
   -moz-box-shadow: 2px 1px 10px 3px rgba(226, 162, 51, 1);
-  box-shadow: 2px 1px 13px 3px rgba(226, 162, 51, 1);
-  background-color: floralwhite;
-  left: 50%;
+  box-shadow: 2px 1px 13px 3px rgba(226, 162, 51, 1); */
+  background-color: #00b7a8c2;
+  /* left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;
-  padding: 1px;
+  padding: 1px; */
   transition: all 0.1s ease-in-out;
 }
 
 nav span:after {
-  background: rgba(255, 255, 255, 0.15);
   position: absolute;
   content: "";
   display: block;
@@ -270,6 +269,16 @@ nav span:after {
   bottom: 4px;
   border-radius: 100%;
   transition: 0.3s;
+}
+
+nav li .active span:after {
+  -webkit-box-shadow: 2px 1px 10px 3px rgba(226, 162, 51, 1);
+  -moz-box-shadow: 2px 1px 10px 3px rgba(226, 162, 51, 1);
+  box-shadow: 2px 1px 13px 3px rgba(226, 162, 51, 1);
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
 }
 
 /* Media query */
