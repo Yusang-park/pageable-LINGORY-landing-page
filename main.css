@@ -134,6 +134,48 @@ p {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .pg-pips {
   opacity: 0;
   display: none;
@@ -147,13 +189,22 @@ p {
   display: block;
 }
 
-.change {
+.appear {
   opacity: 1;
   display: flex;
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 0.5s;
   animation-name: fadeIn;
   animation-duration: 0.5s;
+}
+
+.disappear {
+  opacity: 0;
+  display: flex;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fadeOut;
+  animation-duration: 0.3s;
 }
 
 nav {
@@ -177,7 +228,7 @@ nav ul li {
   display: block;
   width: 14px;
   height: 13px;
-  margin: 7px;
+  margin: 8px; /* pips 사이 간격 */
   position: relative;
 }
 nav ul li a {

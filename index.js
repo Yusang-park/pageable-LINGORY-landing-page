@@ -24,12 +24,20 @@ pages.on("scroll", () => {
   if (Math.floor(pages.scrollPosition) > 1) {
     console.log(Math.floor(pages.scrollPosition));
     console.log("bar 생성");
-    pips.classList.add("change");
+    pips.classList.add("appear");
+    pips.classList.remove("disappear");
+    pips.style.display = "flex";
   } else {
     console.log("bar 제거"); //section 0이므로
-    pips.classList.remove("change");
+    pips.classList.remove("appear");
+    pips.classList.add("disappear");
   }
 });
+
+if (Math.floor(pages.scrollPosition) < 1) {
+  //section0 에서는 pips 동작 block
+  pips.style.display = "none";
+}
 
 // 새로 고침시 첫 페이지로 이동하기
 window.addEventListener("load", () => {
