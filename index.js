@@ -21,14 +21,13 @@ const pips = document.querySelector(".pg-pips");
 const section0 = document.querySelector(".welcome");
 
 pages.on("scroll", () => {
-  if (Math.floor(pages.scrollPosition) > 1) {
-    console.log(Math.floor(pages.scrollPosition));
-    console.log("bar 생성");
+  if (Math.floor(pages.scrollPosition) > 0) {
+    console.log("bar 생성  " + Math.floor(pages.scrollPosition));
     pips.classList.add("appear");
     pips.classList.remove("disappear");
     pips.style.display = "flex";
   } else {
-    console.log("bar 제거"); //section 0이므로
+    console.log("bar 제거  " + Math.floor(pages.scrollPosition)); //section 0이므로
     pips.classList.remove("appear");
     pips.classList.add("disappear");
   }

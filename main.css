@@ -202,9 +202,9 @@ p {
   opacity: 0;
   display: flex;
   -webkit-animation-name: fadeOut;
-  -webkit-animation-duration: 0.3s;
+  -webkit-animation-duration: 0.19s;
   animation-name: fadeOut;
-  animation-duration: 0.3s;
+  animation-duration: 0.19s;
 }
 
 nav {
@@ -421,13 +421,13 @@ nav span:after {
     font-size: 2em;
   }
   .phone-holder {
-    top: 30%;
+    top: 15%;
   }
   .homepage .phone {
     width: 70%;
   }
   .homepage .phone video {
-    height: 50%;
+    /* height: 50%; */
     left: -15px;
   }
 }
