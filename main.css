@@ -46,21 +46,21 @@ body {
   background: #f8f8f6f6;
 }
 
+.container {
+  width: 100%;
+}
+
 .paragraph {
   width: 100%;
-  bottom: 5em;
 }
 
 .phone-holder {
   position: relative;
-  width: 100%;
-  z-index: 2;
-}
-
-.phone {
-  position: relative;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
+}
+.phone video {
+  width: 100%;
 }
 
 h2 {
@@ -285,9 +285,7 @@ nav li .active span:after {
 @media (min-width: 375px) {
   /* 팀 소개 모바일용 수정하기 */
   .container {
-    display: block;
     max-width: 375px;
-    height: 100%;
     margin: 0 auto;
   }
   .welcome .container {
@@ -301,7 +299,6 @@ nav li .active span:after {
   }
   .paragraph {
     position: static;
-    margin-top: 1.2em;
     margin-left: 1em;
   }
   h2 {
@@ -314,14 +311,11 @@ nav li .active span:after {
     font-size: 0.8rem;
   }
   .phone-holder {
-    top: 0;
+    padding-top: 20%;
   }
-  .homepage .phone video {
+  /* .homepage .phone video {
     position: relative;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-  }
+  } */
 
   .tags_container {
     height: 0;
@@ -351,13 +345,6 @@ nav li .active span:after {
     margin-top: 1.5em;
   }
 
-  /* .phone-holder {
-    top: -2.5em;
-  } */
-  .homepage .phone video {
-    width: 70%;
-  }
-
   .tags {
     bottom: 4em;
   }
@@ -369,9 +356,13 @@ nav li .active span:after {
 @media (min-width: 768px) {
   .container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     max-width: 768px;
     margin: 0 auto;
+  }
+  nav ul li {
+    width: 0;
+    margin: 8px 0;
   }
   .welcome h1 {
     font-size: 1.6em;
@@ -379,44 +370,43 @@ nav li .active span:after {
   }
   .paragraph {
     position: relative;
-    margin-left: 10px;
-    /* transform: translateY(-3em); */
+    margin-left: 0;
+    bottom: 7em;
   }
   h2 {
+    width: 100%;
     font-size: 2rem;
     line-height: 3rem;
     margin: 35px 0;
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
+
   .phone-holder {
-    top: 6em;
-    left: 3em;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 100%;
   }
-  .homepage .phone {
+  .phone {
+    position: absolute;
+    top: 0;
     width: 80%;
-    height: 100vh;
+    height: 100%;
+    margin: 0 auto;
     background: url(img/Phone_without_innershadow.png);
     background-repeat: no-repeat;
     background-size: 100%;
   }
-
-  /* .homepage .phone video {
+  .phone video {
     display: block;
-    margin: 0 auto;
-    top: 40px;
-    left: 10px;
+    position: absolute;
+    top: 7em;
+    left: 1.2em;
     width: 80%;
-    height: 100%;
-    z-index: -1;
-  } */
-  .homepage .phone video {
-    top: 0;
-    left: -10px;
-    height: 80%;
+    margin: 0 auto;
   }
-
   .tags {
     bottom: 0;
   }
@@ -433,10 +423,10 @@ nav li .active span:after {
     top: 3em;
   } */
 
-  .homepage .phone video {
-    /* height: 50%; */
+  /* .homepage .phone video {
+    height: 50%; 
     left: -15px;
-  }
+  } */
 
   .team > .container {
     align-items: flex-start;
@@ -467,22 +457,22 @@ nav li .active span:after {
     font-size: 1.2rem;
   }
 
-  .homepage .phone video {
+  /* .homepage .phone video {
     top: 80px;
-  }
+  } */
 }
 
 @media (min-width: 1600px) {
   .container {
     max-width: 1600px;
   }
-  .homepage .phone-holder {
+  /* .homepage .phone-holder {
     width: 80%;
     top: 5em;
-  }
-  .homepage .phone video {
+  } */
+  /* .homepage .phone video {
     height: 65%;
-  }
+  } */
   h2 {
     font-size: 4.2rem;
     line-height: 6rem;
@@ -504,7 +494,7 @@ nav li .active span:after {
   }
 }
 
-@media (min-height: 700px) {
+/* @media (min-height: 700px) {
   .homepage .phone {
     width: 58%;
   }
@@ -514,4 +504,4 @@ nav li .active span:after {
   .homepage .phone {
     width: 65%;
   }
-}
+} */
