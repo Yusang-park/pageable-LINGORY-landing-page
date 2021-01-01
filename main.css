@@ -358,7 +358,14 @@ nav li .active span:after {
     display: flex;
     flex-direction: column;
     max-width: 768px;
+    height: 100%;
     margin: 0 auto;
+  }
+  .grid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   nav ul li {
     width: 0;
@@ -371,7 +378,6 @@ nav li .active span:after {
   .paragraph {
     position: relative;
     margin-left: 0;
-    bottom: 7em;
   }
   h2 {
     width: 100%;
@@ -387,12 +393,17 @@ nav li .active span:after {
     position: relative;
     height: 100%;
     margin: 0 auto;
-    padding-top: 100%;
+    padding-top: 0;
+    transform: translateY(10%);
   }
   .phone {
     position: absolute;
     top: 0;
-    width: 80%;
+    /* center 정렬 */
+    left: 50%;
+    transform: translateX(-50%);
+    /*  */
+    width: 70%;
     height: 100%;
     margin: 0 auto;
     background: url(img/Phone_without_innershadow.png);
@@ -402,8 +413,8 @@ nav li .active span:after {
   .phone video {
     display: block;
     position: absolute;
-    top: 7em;
-    left: 1.2em;
+    top: 20%;
+    left: 5%;
     width: 80%;
     margin: 0 auto;
   }
@@ -414,25 +425,30 @@ nav li .active span:after {
 
 @media (min-width: 992px) {
   .container {
+    flex-direction: row;
     max-width: 992px;
   }
   .welcome h1 {
     font-size: 2em;
   }
-  /* .phone-holder {
-    top: 3em;
-  } */
 
-  /* .homepage .phone video {
-    height: 50%; 
-    left: -15px;
-  } */
+  .paragraph {
+    position: static;
+    transform: translateY(20%);
+    /* margin-top: 10em; */
+  }
+
+  .phone {
+    position: absolute;
+    width: 90%;
+    transform: translate(-45%, 10%);
+  }
+  .phone video {
+    top: 10%;
+  }
 
   .team > .container {
     align-items: flex-start;
-  }
-  .paragraph {
-    margin-top: 10em;
   }
 }
 
