@@ -134,48 +134,6 @@ p {
   }
 }
 
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0.9;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0.3;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0.9;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0.3;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .pg-pips {
   opacity: 0;
   display: none;
@@ -196,15 +154,6 @@ p {
   -webkit-animation-duration: 0.5s;
   animation-name: fadeIn;
   animation-duration: 0.5s;
-}
-
-.disappear {
-  opacity: 0;
-  display: flex;
-  -webkit-animation-name: fadeOut;
-  -webkit-animation-duration: 0.19s;
-  animation-name: fadeOut;
-  animation-duration: 0.19s;
 }
 
 nav {

@@ -12,32 +12,26 @@ var pages = new Pageable("#hompage", {
     keydown: true, // enable / disable keyboard navigation
   },
 });
-pages.on("scroll", () => {});
+//pages.on("scroll", () => {});
 
 document.getElementById("gif").src =
   "img/logo_good_quality.gif?a=" + Math.random();
 
+//Pips 조절
 const pips = document.querySelector(".pg-pips");
 const section0 = document.querySelector(".welcome");
 
 pages.on("scroll", () => {
-  if (Math.floor(pages.scrollPosition) > 0) {
+  if (Math.floor(pages.scrollPosition) > section0.clientHeight/2) {
     console.log("bar 생성  " + Math.floor(pages.scrollPosition));
     pips.classList.add("appear");
-    pips.classList.remove("disappear");
     pips.style.display = "flex";
   } else {
-    console.log("bar 제거  " + Math.floor(pages.scrollPosition)); //section 0이므로
+    console.log("bar 제거  " + Math.floor(pages.scrollPosition));
     pips.classList.remove("appear");
-    pips.classList.add("disappear");
-    //pips.style.display = "none";
+    pips.style.display = "none";
   }
 });
-
-if (Math.floor(pages.scrollPosition) < 1) {
-  //section0 에서는 pips 동작 block
-  pips.style.display = "none";
-}
 
 // 새로 고침시 첫 페이지로 이동하기
 window.addEventListener("load", () => {
@@ -51,31 +45,3 @@ if (document.body.offsetWidth > 767) {
 } else {
   extra.forEach((e) => e.classList.remove("visible"));
 }
-
-//페이지 active되면 stop 시키기
-
-// const sections = document.querySelectorAll(".section");
-// sections.forEach((e) => {
-//   if (e.classList.contains("pg-active")) {
-//     console.log(e.classList);
-
-//     setTimeout(() => {
-//       console.log("잠시 멈춤");
-//       document.body.style.overflow = "hidden";
-//       //   pages = new Pageable("#hompage", {
-//       //     events: {
-//       //       wheel: false, // enable / disable mousewheel scrolling
-//       //     },
-//       //   });
-//     }, 5000);
-//   }
-// });
-
-// pages.on("scroll.end", (e) => {
-//   console.log(e.index);
-//   // do something when scrolling ends
-// });
-// if (클래스에 pg-active가 있으면)
-//setTimeOut으로 events: wheel: false로 하기. 한 100ms동안??
-
-//스크롤 한 양이 섹션 크기와 동일해지면 스크롤 멈추게 하기!!
