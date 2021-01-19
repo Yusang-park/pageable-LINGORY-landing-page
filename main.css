@@ -266,12 +266,16 @@ nav li .active span:after {
     position: relative;
   } */
 
-  .tags_container {
-    height: 0;
+  .team > .container > .paragraph {
+    margin-top: calc(40%);
   }
-  /* .tags {
+  .tags_container {
+    margin-top: calc(100%);
+  }
+
+  .tags {
     position: static;
-  } */
+  }
 }
 
 @media (min-width: 576px) {
@@ -295,10 +299,19 @@ nav li .active span:after {
   }
 
   .tags {
+    position: absolute;
     bottom: 4em;
   }
+  .team > .container > .paragraph {
+    margin-top: 0;
+  }
+  .tags_container {
+    margin-top: 0;
+  }
+
   .tags_container {
     height: 0;
+    position: relative;
   }
 }
 
@@ -342,10 +355,10 @@ nav li .active span:after {
 
   .phone-holder {
     position: relative;
-    height: calc(100vh - 17%);
+    height: 100%;
     margin: 0 auto;
     padding-top: 0;
-    transform: translateY(10%);
+    /* transform: translateY(10%); */
   }
   .phone {
     position: absolute;
@@ -393,7 +406,7 @@ nav li .active span:after {
   .phone {
     position: absolute;
     width: 90%;
-    transform: translate(-45%, 10%);
+    transform: translate(-45%, 5%);
   }
   .phone video {
     top: 15%;
