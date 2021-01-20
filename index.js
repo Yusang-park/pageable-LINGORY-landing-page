@@ -13,6 +13,9 @@ var pages = new Pageable("#hompage", {
   },
 });
 
+setTimeout(function () {
+  window.scrollTo(0, 1);
+}, 1000);
 
 document.getElementById("gif").src =
   "img/logo_good_quality.gif?a=" + Math.random();
