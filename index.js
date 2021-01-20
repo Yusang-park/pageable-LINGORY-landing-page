@@ -12,7 +12,8 @@ var pages = new Pageable("#hompage", {
     keydown: true, // enable / disable keyboard navigation
   },
 });
-//pages.on("scroll", () => {});
+
+window.scrollTo(0,1);
 
 document.getElementById("gif").src =
   "img/logo_good_quality.gif?a=" + Math.random();
