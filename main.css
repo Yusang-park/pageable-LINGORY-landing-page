@@ -43,6 +43,7 @@ body {
 .section {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .section:nth-child(even) {
@@ -348,7 +349,7 @@ nav li .active span:after {
     left: 50%;
     transform: translateX(-50%);
     /*  */
-    width: 65%;
+    width: 55%;
     height: 100%;
     margin: 0 auto;
     background: url(img/Phone_without_innershadow.png);
@@ -386,7 +387,7 @@ nav li .active span:after {
 
   .phone {
     position: absolute;
-    width: 90%;
+    width: 70%;
     transform: translate(-45%, 5%);
   }
   .phone video {
@@ -401,6 +402,7 @@ nav li .active span:after {
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    align-items: center;
   }
   .paragraph {
     margin-left: 2em;
@@ -434,9 +436,6 @@ nav li .active span:after {
   }
   p {
     font-size: 1.7rem;
-  }
-  .phone {
-    width: 70%;
   }
   .team .paragraph {
     margin-top: 0;
