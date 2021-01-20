@@ -266,14 +266,17 @@ nav li .active span:after {
     position: relative;
   } */
 
-  .team > .container > .paragraph {
-    margin-top: calc(40%);
+  .team > .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tags {
+    transform: scale(1.1);
   }
   .tags_container {
-    margin-top: calc(100%);
-  }
-
-  .tags {
     position: static;
   }
 }
