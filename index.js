@@ -13,7 +13,6 @@ var pages = new Pageable("#hompage", {
   },
 });
 
-window.scrollTo(0,1);
 
 document.getElementById("gif").src =
   "img/logo_good_quality.gif?a=" + Math.random();
