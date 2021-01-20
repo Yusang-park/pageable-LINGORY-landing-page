@@ -2,11 +2,6 @@
   --color-main: #00b7a9;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 #homepage {
   overflow-x: hidden;
 }
@@ -255,6 +250,7 @@ nav li .active span:after {
   .paragraph {
     position: static;
     margin-left: 1em;
+    padding-top: 20%;
   }
   h2 {
     font-size: 1rem;
@@ -268,9 +264,6 @@ nav li .active span:after {
   .phone-holder {
     padding-top: 20%;
   }
-  /* .homepage .phone video {
-    position: relative;
-  } */
 
   .team > .container {
     position: relative;
@@ -279,9 +272,7 @@ nav li .active span:after {
     flex-direction: column;
     justify-content: center;
   }
-  /* .tags {
-    transform: scale(1.1);
-  } */
+
   .tags_container {
     position: static;
   }
@@ -305,6 +296,7 @@ nav li .active span:after {
 
   .paragraph {
     margin-top: 1.5em;
+    margin-left: 0.5em;
   }
 }
 
@@ -334,6 +326,7 @@ nav li .active span:after {
   }
   .paragraph {
     position: relative;
+    padding-top: 0;
   }
   h2 {
     width: 100%;
@@ -350,7 +343,6 @@ nav li .active span:after {
     height: 100%;
     margin: 0 auto;
     padding-top: 0;
-    /* transform: translateY(10%); */
   }
   .phone {
     position: absolute;
@@ -359,7 +351,7 @@ nav li .active span:after {
     left: 50%;
     transform: translateX(-50%);
     /*  */
-    width: 70%;
+    width: 65%;
     height: 100%;
     margin: 0 auto;
     background: url(img/Phone_without_innershadow.png);
@@ -370,9 +362,9 @@ nav li .active span:after {
     display: block;
     position: absolute;
     top: 20%;
-    left: 5%;
-    width: 80%;
-    height: calc(100vh - 40%);
+    left: 6%;
+    width: 79%;
+    /* height: calc(100vh - 40%); */
     margin: 0 auto;
   }
   .tags {
