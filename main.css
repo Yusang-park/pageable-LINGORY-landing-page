@@ -250,7 +250,7 @@ nav li .active span:after {
   .paragraph {
     position: static;
     margin-left: 1em;
-    padding-top: 20%;
+    padding-top: 15%;
   }
   h2 {
     font-size: 1rem;
@@ -437,6 +437,9 @@ nav li .active span:after {
   }
   p {
     font-size: 1.7rem;
+  }
+  .phone {
+    width: 80%;
   }
 }
 
