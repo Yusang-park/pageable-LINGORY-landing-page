@@ -34,9 +34,9 @@ pages.on("scroll", () => {
 });
 
 // 새로 고침시 첫 페이지로 이동하기
-window.addEventListener("load", () => {
-  pages.scrollToAnchor("#page-0");
-});
+// window.addEventListener("load", () => {
+//   pages.scrollToAnchor("#page-0");
+// });
 
 //767px 이하면 extra 메세지 안 보이게 설정
 const extra = document.querySelectorAll(".extra");
